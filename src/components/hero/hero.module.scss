@@ -1,1 +1,44 @@
-@use "../../sass/layout/hero" as *;
+.hero {
+    width: 100%;
+    height: calc(100vh - 104px);
+    position: relative;
+
+    .video__wrapper{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        z-index: 1;
+
+        & > div {
+            height: calc(100vh - 104px);
+            position: sticky;
+            top:104px;
+            left: 0;
+            overflow: hidden;
+
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center top;
+                opacity: 0.99;
+            }
+
+            .overlay {
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #000;
+                opacity: 1;
+                z-index: 3;
+            }
+        }
+    }
+
+}
