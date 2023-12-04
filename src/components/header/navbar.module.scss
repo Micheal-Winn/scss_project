@@ -2,81 +2,75 @@
 @use "../../sass/components" as *;
 
 @mixin spanHidden {
-    span {
-        visibility: hidden;
-    }
+  span {
+    visibility: hidden;
+  }
 }
 
 .header {
-    width: 100%;
-    color: white;
-    background-color: black;  
-    font-size: 0.8rem;
-    padding:5px 0;
+  width: 100%;
+  color: white;
+  background-color: black;
+  font-size: 0.8rem;
+  padding: 5px 0;
 
-    .nav{
-        width: 55%;
-        margin: 0 auto;        
+  .nav {
+    width: 65%;
+    margin: 0 auto;
 
-
-        &__links {
-            width: 100%;
-            display: flex;
-            gap: 3%;
-            list-style: none;
-            margin: 0;
-            height: 48px;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0;
-
-            
-        }
-
-        &__logo {
-            @include image('/images/logo.svg');
-            @include spanHidden;
-
-        }
-
-        &__link {
-            cursor: pointer;
-            opacity: 0.8;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-        &__search{
-            @include image("/images/search.svg");
-            @include spanHidden;
-        }
-        &__cart{
-            @include image("/images/cart.svg");
-            @include spanHidden;
-        }
-
-        &__stream {
-            background-color: black;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position:sticky;
-            top: 0;
-
-
-            &__text {
-                font-size: 1.3rem;
-                font-weight: 500;
-                line-height: 0.2;
-                cursor: pointer;
-            }
-
-            &__button {
-                @include button();
-            }
-        }
-
+    &__links {
+      width: 100%;
+      display: flex;
+      gap: 3%;
+      list-style: none;
+      margin: 0;
+      height: 48px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
     }
+
+    &__logo {
+      @include image("/images/logo.svg");
+      @include spanHidden;
+    }
+
+    &__link {
+      cursor: pointer;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &__search {
+      @include image("/images/search.svg");
+      @include spanHidden;
+    }
+    &__cart {
+      @include image("/images/cart.svg");
+      @include spanHidden;
+    }
+
+    &__stream {
+      background-color: black;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+
+      &__text {
+        font-size: 1.3rem;
+        font-weight: 500;
+        line-height: 0.2;
+        cursor: pointer;
+      }
+
+      &__button {
+        @include button();
+      }
+    }
+  }
 }
