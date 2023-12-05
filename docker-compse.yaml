@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  scss_project:
+    build: .
+    container_name: scss_c
+    port:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - ./app/node_modules
